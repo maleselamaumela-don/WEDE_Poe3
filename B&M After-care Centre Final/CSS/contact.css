@@ -1,0 +1,145 @@
+/*Colors of the webpage and the font*/
+
+*{  margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #f7f1e6;
+    color: #17120F;
+    font-family: 'Work Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* All images: framed, with a signature red drop-shadow */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 16px;
+    border: 3px solid #17120F;
+    box-shadow: 8px 8px 0 #D62839;
+}
+
+/* Logo — small, round, sits right under the header */
+img[alt="logo-aftercare"]{
+    border-radius: 50%;
+    border: 3px solid #D62839;
+    box-shadow: none;
+    margin: 1.5rem auto 0;
+}
+
+/* Slogan */
+body > h1{
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    max-width: 40ch;
+    margin: 1rem auto 2rem;
+    padding: 0 1.25rem;
+    color: #17120F;
+}
+
+main{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem) 2rem;
+}
+
+/* Nav */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem;
+    background: #17120F;
+    border-radius: 999px;
+    padding: .5rem;
+    margin: 0 auto 2.5rem;
+    max-width: fit-content;
+}
+nav a{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #EDE3D2;
+    text-decoration: none;
+    padding: .55em 1.1em;
+    border-radius: 999px;
+    transition: background .15s ease, color .15s ease;
+}
+nav a:hover{
+    background: #D62839;
+    color: #F7F1E6;
+}
+
+/*Mobile responsive design*/
+@media only screen and (max-width: 600px){
+    .main-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+
+/* Get in touch labels + links */
+.numbers, .gmail, .facebook{
+    display: inline-block;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .75rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #D62839;
+    margin-top: 1.4rem;
+}
+.numbers + a, .gmail + a, .facebook + a{
+    display: block;
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #17120F;
+    text-decoration: none;
+    margin-bottom: .5rem;
+}
+.numbers + a:hover, .gmail + a:hover, .facebook + a:hover{
+    color: #8C1420;
+}
+
+/* Map */
+.map{
+    margin: 2rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #17120F;
+    box-shadow: 8px 8px 0 #D62839;
+}
+.map iframe{
+    width: 100%;
+    display: block;
+}
+
+/* Footer */
+.footer{
+    background: #17120F;
+    border-top: 3px solid #D62839;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.copyright{
+    margin: 0;
+    text-align: center;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    color: #EDE3D2;
+}
